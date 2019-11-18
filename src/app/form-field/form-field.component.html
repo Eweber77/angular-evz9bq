@@ -1,0 +1,25 @@
+<div class="form-container">  
+  <mat-form-field appearance="standard">
+    <mat-label>Party 1 (US)</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="standard">
+    <mat-label>Party 2 (Them)</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Trade Date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="standard">
+    <mat-label>Party 2 (Them)</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  
+
+</div>
