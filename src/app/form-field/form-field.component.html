@@ -10,16 +10,49 @@
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Trade Date">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+    <input matInput [matDatepicker]="picker1" placeholder="Trade Date">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
   </mat-form-field>
 
-  <mat-form-field appearance="standard">
-    <mat-label>Party 2 (Them)</mat-label>
-    <input matInput>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker2" placeholder="Start Date">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
   </mat-form-field>
-
   
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker3" placeholder="Maturity Date">
+    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+    <mat-datepicker #picker3></mat-datepicker>
+  </mat-form-field>
 
+  <mat-form-field>
+    <mat-label>Currency</mat-label>
+    <select matNativeControl required>
+      <option value="EUR">EUR</option>
+      <option value="USD">USD</option>
+      <option value="GBP">GBP</option>
+    </select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Nominal" type="number" >
+    <span matSuffix>.00</span>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Rate" type="number" >
+    <span matSuffix>%</span>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Day Count</mat-label>
+    <select matNativeControl required>
+      <option value="ACT/360">ACT/360</option>
+      <option value="30/360">30/360</option>
+      <option value="ACT/ACT">ACT/ACT</option>
+      <option value="ACT/365">ACT/365</option>
+    </select>
+  </mat-form-field>
 </div>
