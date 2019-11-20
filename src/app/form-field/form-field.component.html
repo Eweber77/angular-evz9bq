@@ -48,8 +48,8 @@
     
     <mat-form-field>
       <mat-label>Currency</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let Currency of Currencies" [value]="Currency.Value">
+      <mat-select [(ngModel)]="Currency" name="Currency">
+        <mat-option *ngFor="let Currency of Currencies" [value]="Currency.Value" >
           {{Currency.Value}}
         </mat-option>
       </mat-select>
@@ -72,7 +72,7 @@
     
     <mat-form-field>
       <mat-label>Day Count</mat-label>
-      <mat-select>
+      <mat-select [(ngModel)]="DayCount" name="DayCount">
         <mat-option *ngFor="let DayCount of DayCounts" [value]="DayCount.Value">
           {{DayCount.Value}}
         </mat-option>
@@ -85,6 +85,6 @@
     </div>
   </form>
 </div>
-
+{{Party1.value}},{{Party2.value}},{{TradeDate.value}},{{StartDate.value}},{{MaturityDate.value}},{{Currency}},{{Nominal.value}},{{Rate.value}},{{DayCount}}
 
 
