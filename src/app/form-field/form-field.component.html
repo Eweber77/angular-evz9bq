@@ -40,11 +40,11 @@
     
     <mat-form-field>
       <mat-label>Currency</mat-label>
-      <select matNativeControl required>
-        <option value="EUR">EUR</option>
-        <option value="USD">USD</option>
-        <option value="GBP">GBP</option>
-      </select>
+      <mat-select>
+        <mat-option *ngFor="let Currency of Currencies" [value]="Currency.Value">
+          {{Currency.Value}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     <br/>
     

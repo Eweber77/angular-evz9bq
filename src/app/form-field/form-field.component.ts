@@ -23,6 +23,11 @@ export class FormFieldComponent implements OnInit {
     {Value: 'ACT/365'},
     {Value: '30/360'}  ];
 
+  Currencies: [] = [
+    {Value: 'EUR'},
+    {Value: 'GBP'},
+    {Value: 'USD'}  ];
+
   ngOnInit() {
   }
 
