@@ -1,6 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { formatDate } from "@angular/common";
 
+export const MY_FORMAT: MatDateFormats = {
+parse: {
+dateInput: 'DD/MM/YYYY',
+},
+display: {
+dateInput: 'DD/MM/YYYY',
+monthYearLabel: 'MMM YYYY',
+dateA11yLabel: 'DD/MM/YYYY',
+monthYearA11yLabel: 'MMMM YYYY',
+},
+};
 
 @Component({
   selector: 'app-form-field',
@@ -17,6 +29,8 @@ export class FormFieldComponent implements OnInit {
   StartDate = new FormControl('', [Validators.required]);
   Nominal = new FormControl('', [Validators.required]);
   Rate = new FormControl('', [Validators.required]);
+  Currency = new FormControl('', [Validators.required])
+  DayCount = new FormControl('', [Validators.required])
   constructor() { }
 
   DayCounts: [] = [
@@ -34,6 +48,13 @@ export class FormFieldComponent implements OnInit {
   onClickMe() {
     this.clickMessage = "Sending String";
   }
+  setValue(id=string,value: string) {
+  
+  if (id==='') 
+    {this.value='0,'+value}
+    else
+    {this.value=id+value}
+}
   ngOnInit() {
   }
 
