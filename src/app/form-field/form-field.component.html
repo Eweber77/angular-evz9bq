@@ -82,7 +82,7 @@
     
     <br/>
     <div class="button-row">
-      <button mat-flat-button color="primary" [disabled]="Party1.invalid || Party2.invalid || TradeDate.invalid || StartDate.invalid || MaturityDate.invalid||Nominal.invalid||Rate.invalid">Save</button>
+      <button mat-flat-button color="primary" [disabled]="Party1.invalid || Party2.invalid || TradeDate.invalid || StartDate.invalid || MaturityDate.invalid||Nominal.invalid||Rate.invalid"  (click)="onClickMe()">Save</button>{{clickMessage}}
     </div>
   </form>
 </div>

@@ -5,7 +5,8 @@ import {FormControl, Validators} from '@angular/forms';
 @Component({
   selector: 'app-form-field',
   templateUrl: './form-field.component.html',
-  styleUrls: ['./form-field.component.css']
+  styleUrls: ['./form-field.component.css'],
+
 })
 export class FormFieldComponent implements OnInit {
   TradeID=new FormControl('');
@@ -28,6 +29,11 @@ export class FormFieldComponent implements OnInit {
     {Value: 'GBP'},
     {Value: 'USD'}  ];
 
+  clickMessage = '';
+
+  onClickMe() {
+    this.clickMessage = "Sending String";
+  }
   ngOnInit() {
   }
 
