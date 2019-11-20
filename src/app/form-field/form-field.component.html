@@ -65,7 +65,7 @@
     <mat-form-field>
       <input matInput placeholder="Rate" type="number" name="Rate" [formControl]="Rate" ng-model="Rate" required >
       <span matSuffix>%</span>
-      <mat-error *ngIf="Party2.Rate">Required</mat-error>
+      <mat-error *ngIf="Rate.invalid">Required</mat-error>
     </mat-form-field>
     <br/>
     
@@ -80,7 +80,7 @@
     
     <br/>
     <div class="button-row">
-      <button mat-flat-button color="primary">Save</button>
+      <button mat-flat-button color="primary" [disabled]="Party1.invalid || Party2.invalid || TradeDate.invalid || StartDate.invalid || MaturityDate.invalid||Nominal.invalid||Rate.invalid">Save</button>
     </div>
   </form>
 </div>
