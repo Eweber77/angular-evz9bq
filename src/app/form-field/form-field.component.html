@@ -64,12 +64,11 @@
     
     <mat-form-field>
       <mat-label>Day Count</mat-label>
-      <select matNativeControl required>
-        <option value="ACT/360">ACT/360</option>
-        <option value="30/360">30/360</option>
-        <option value="ACT/ACT">ACT/ACT</option>
-        <option value="ACT/365">ACT/365</option>
-      </select>
+      <mat-select>
+        <mat-option *ngFor="let DayCount of DayCounts" [value]="DayCount.id">
+          {{DayCount.Value}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     
     <br/>
