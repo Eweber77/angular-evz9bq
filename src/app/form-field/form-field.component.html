@@ -1,5 +1,12 @@
 <div class="form-container">  
   <form name="TradeCapture" ng-submit="submitForm(TradeCapture.$valid)" novalidate>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Trade ID</mat-label>
+      <input matInput name="TradeID" [formControl]="TradeID" ng-model="TradeID">
+    </mat-form-field>
+    <br/>
+
     <mat-form-field appearance="standard">
       <mat-label>Party 1 (US)</mat-label>
       <input matInput name="Party1" [formControl]="Party1" ng-model="Party1" required>

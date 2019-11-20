@@ -9,6 +9,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./form-field.component.css']
 })
 export class FormFieldComponent implements OnInit {
+  TradeID=new FormControl('');
   Party1 = new FormControl('', [Validators.required]);
   Party2 = new FormControl('', [Validators.required]);
   TradeDate = new FormControl('', [Validators.required]);
