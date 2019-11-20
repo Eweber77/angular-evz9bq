@@ -9,6 +9,11 @@ import {FormControl, Validators} from '@angular/forms';
 export class FormFieldComponent implements OnInit {
   Party1 = new FormControl('', [Validators.required]);
   Party2 = new FormControl('', [Validators.required]);
+  TradeDate = new FormControl('', [Validators.required]);
+  MaturityDate = new FormControl('', [Validators.required]);
+  StartDate = new FormControl('', [Validators.required]);
+  Nominal = new FormControl('', [Validators.required]);
+  Rate = new FormControl('', [Validators.required]);
   constructor() { }
 
   ngOnInit() {
