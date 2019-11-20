@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
-export interface DC {
-  id: string;
-  Value: string;
-}
+
 
 @Component({
   selector: 'app-form-field',
@@ -21,16 +18,12 @@ export class FormFieldComponent implements OnInit {
   Rate = new FormControl('', [Validators.required]);
   constructor() { }
 
-
+  DayCounts: [] = [
+    {Value: 'ACT/360'},
+    {Value: 'ACT/365'},
+    {Value: '30/360'}  ];
 
   ngOnInit() {
   }
 
-}
-export class DayCountChoice {
-  DayCounts: DC[] = [
-    {id:"1",Value: 'ACT/360'},
-    {id:"2",Value: 'ACT/365'},
-    {id:"3",Value: '30/360'}  
-  ];
 }
