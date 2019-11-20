@@ -22,12 +22,13 @@
     <br/>
 
     <mat-form-field>
-      <input matInput [matDatepicker]="picker1" placeholder="Trade Date" name="TradeDate" [formControl]="TradeDate" ng-model="TradeDate" required>
+      <input matInput [matDatepicker]="picker1" placeholder="Trade Date" name="TradeDate" [formControl]="TradeDate" ng-model="TradeDate" value="11/20/2019">
       <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
       <mat-datepicker #picker1></mat-datepicker>
       <mat-error *ngIf="TradeDate.invalid">Required</mat-error>
     </mat-form-field>
     <br/>
+
 
     <mat-form-field>
       <input matInput [matDatepicker]="picker2" placeholder="Start Date" name="StartDate" [formControl]="StartDate" ng-model="StartDate" required>
@@ -84,3 +85,6 @@
     </div>
   </form>
 </div>
+
+
+

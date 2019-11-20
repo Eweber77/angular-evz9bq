@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
 
-
 @Component({
   selector: 'app-form-field',
   templateUrl: './form-field.component.html',
