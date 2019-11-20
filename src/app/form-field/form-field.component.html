@@ -21,18 +21,23 @@
       <mat-error *ngIf="TradeDate.invalid">Required</mat-error>
     </mat-form-field>
     <br/>
+
     <mat-form-field>
-      <input matInput [matDatepicker]="picker2" placeholder="Start Date">
+      <input matInput [matDatepicker]="picker2" placeholder="Start Date" name="StartDate" [formControl]="StartDate" ng-model="StartDate" required>
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
       <mat-datepicker #picker2></mat-datepicker>
+      <mat-error *ngIf="StartDate.invalid">Required</mat-error>
     </mat-form-field>
     <br/>    
+    
     <mat-form-field>
-      <input matInput [matDatepicker]="picker3" placeholder="Maturity Date">
+      <input matInput [matDatepicker]="picker3" placeholder="Maturity Date" name="MaturityDate" [formControl]="MaturityDate" ng-model="MaturityDate" required>
       <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
       <mat-datepicker #picker3></mat-datepicker>
+      <mat-error *ngIf="MaturityDate.invalid">Required</mat-error>
     </mat-form-field>
     <br/>
+    
     <mat-form-field>
       <mat-label>Currency</mat-label>
       <select matNativeControl required>
@@ -42,16 +47,21 @@
       </select>
     </mat-form-field>
     <br/>
+    
     <mat-form-field>
-      <input matInput placeholder="Nominal" type="number" >
+      <input matInput placeholder="Nominal" type="number" name="Nominal" [formControl]="Nominal" ng-model="Nominal" required >
       <span matSuffix>.00</span>
+      <mat-error *ngIf="Nominal.invalid">Required</mat-error>
     </mat-form-field>
     <br/>
+    
     <mat-form-field>
-      <input matInput placeholder="Rate" type="number" >
+      <input matInput placeholder="Rate" type="number" name="Rate" [formControl]="Rate" ng-model="Rate" required >
       <span matSuffix>%</span>
+      <mat-error *ngIf="Party2.Rate">Required</mat-error>
     </mat-form-field>
     <br/>
+    
     <mat-form-field>
       <mat-label>Day Count</mat-label>
       <select matNativeControl required>
