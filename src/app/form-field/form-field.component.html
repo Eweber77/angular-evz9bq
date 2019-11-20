@@ -85,6 +85,6 @@
     </div>
   </form>
 </div>
-{{TradeID.value}},{{Party1.value}},{{Party2.value}},{{TradeDate.value}},{{StartDate.value}},{{MaturityDate.value}},{{Currency}},{{Nominal.value}},{{Rate.value}},{{DayCount}}
+{{TradeID.value}}<span *ngIf="!TradeID.invalid">,</span>{{Party1.value}},{{Party2.value}},{{TradeDate.value}},{{StartDate.value}},{{MaturityDate.value}},{{Currency}},{{Nominal.value}},{{Rate.value}},{{DayCount}}
 
 
