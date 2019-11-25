@@ -55,9 +55,9 @@ export class FormFieldComponent implements OnInit {
   setValue(id=string,value: string) {
   
   if (id==='') 
-    {this.value='0,'+message}
+    {this.value='0,'+value}
     else
-    {this.value=id+message}
+    {this.value=id+value}
 }
   ngOnInit() {
   }
