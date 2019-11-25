@@ -14,6 +14,10 @@ monthYearA11yLabel: 'MMMM YYYY',
 },
 };
 
+export var TradeID: number;
+
+var message ={"id":TradeID};
+
 @Component({
   selector: 'app-form-field',
   templateUrl: './form-field.component.html',
@@ -51,9 +55,9 @@ export class FormFieldComponent implements OnInit {
   setValue(id=string,value: string) {
   
   if (id==='') 
-    {this.value='0,'+value}
+    {this.value='0,'+message}
     else
-    {this.value=id+value}
+    {this.value=id+message}
 }
   ngOnInit() {
   }
