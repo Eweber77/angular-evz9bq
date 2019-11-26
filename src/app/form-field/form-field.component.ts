@@ -2,21 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { formatDate } from "@angular/common";
 
-export const MY_FORMAT: MatDateFormats = {
-parse: {
-dateInput: 'DD/MM/YYYY',
-},
-display: {
-dateInput: 'DD/MM/YYYY',
-monthYearLabel: 'MMM YYYY',
-dateA11yLabel: 'DD/MM/YYYY',
-monthYearA11yLabel: 'MMMM YYYY',
-},
-};
-
-export var TradeID: number;
-
-var message ={"id":TradeID};
 
 @Component({
   selector: 'app-form-field',
@@ -37,10 +22,12 @@ export class FormFieldComponent implements OnInit {
   DayCount = new FormControl('', [Validators.required])
   constructor() { }
 
+
   DayCounts: [] = [
     {Value: 'ACT/360'},
     {Value: 'ACT/365'},
     {Value: '30/360'}  ];
+
 
   Currencies: [] = [
     {Value: 'EUR'},

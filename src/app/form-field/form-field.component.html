@@ -3,27 +3,27 @@
 
     <mat-form-field appearance="standard">
       <mat-label>Trade ID</mat-label>
-      <input matInput name="TradeID" [formControl]="TradeID" ng-model="TradeID" value="0">
+      <input matInput [formControl]="TradeID"  value="0">
     </mat-form-field>
     <br/>
 
 
     <mat-form-field appearance="standard">
       <mat-label>Party 1 (US)</mat-label>
-      <input matInput name="Party1" [formControl]="Party1" ng-model="Party1" required>
+      <input matInput [formControl]="Party1"  required>
       <mat-error *ngIf="Party1.invalid">Required</mat-error>
     </mat-form-field>
 
     <br/>
     <mat-form-field appearance="standard">
       <mat-label>Party 2 (Them)</mat-label>
-      <input matInput name="Party2" [formControl]="Party2" ng-model="Party2" required>
+      <input matInput [formControl]="Party2" required>
       <mat-error *ngIf="Party2.invalid">Required</mat-error>
     </mat-form-field>
     <br/>
 
     <mat-form-field>
-      <input matInput [matDatepicker]="picker1" placeholder="Trade Date" name="TradeDate" [formControl]="TradeDate" ng-model="TradeDate" >
+      <input matInput [matDatepicker]="picker1" placeholder="Trade Date"  [formControl]="TradeDate" >
       <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
       <mat-datepicker #picker1></mat-datepicker>
       <mat-error *ngIf="TradeDate.invalid">Required</mat-error>
@@ -32,7 +32,7 @@
 
 
     <mat-form-field>
-      <input matInput [matDatepicker]="picker2" placeholder="Start Date" name="StartDate" [formControl]="StartDate" ng-model="StartDate" required>
+      <input matInput [matDatepicker]="picker2" placeholder="Start Date" [formControl]="StartDate" required>
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
       <mat-datepicker #picker2></mat-datepicker>
       <mat-error *ngIf="StartDate.invalid">Required</mat-error>
@@ -40,7 +40,7 @@
     <br/>    
     
     <mat-form-field>
-      <input matInput [matDatepicker]="picker3" placeholder="Maturity Date" name="MaturityDate" [formControl]="MaturityDate" ng-model="MaturityDate" required>
+      <input matInput [matDatepicker]="picker3" placeholder="Maturity Date"  [formControl]="MaturityDate"  required>
       <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
       <mat-datepicker #picker3></mat-datepicker>
       <mat-error *ngIf="MaturityDate.invalid">Required</mat-error>
@@ -49,7 +49,7 @@
     
     <mat-form-field>
       <mat-label>Currency</mat-label>
-      <mat-select [(ngModel)]="Currency" name="Currency">
+      <mat-select [formControl]="Currency" >
         <mat-option *ngFor="let Currency of Currencies" [value]="Currency.Value" >
           {{Currency.Value}}
         </mat-option>
@@ -58,14 +58,14 @@
     <br/>
     
     <mat-form-field>
-      <input matInput placeholder="Nominal" type="number" name="Nominal" [formControl]="Nominal" ng-model="Nominal" required >
+      <input matInput placeholder="Nominal" type="number" [formControl]="Nominal" required >
       <span matSuffix>.00</span>
       <mat-error *ngIf="Nominal.invalid">Required</mat-error>
     </mat-form-field>
     <br/>
     
     <mat-form-field>
-      <input matInput placeholder="Rate" type="number" name="Rate" [formControl]="Rate" ng-model="Rate" required >
+      <input matInput placeholder="Rate" type="number"  [formControl]="Rate"  required >
       <span matSuffix>%</span>
       <mat-error *ngIf="Rate.invalid">Required</mat-error>
     </mat-form-field>
@@ -73,7 +73,7 @@
     
     <mat-form-field>
       <mat-label>Day Count</mat-label>
-      <mat-select [(ngModel)]="DayCount" name="DayCount">
+      <mat-select [formControl]="DayCount" >
         <mat-option *ngFor="let DayCount of DayCounts" [value]="DayCount.Value">
           {{DayCount.Value}}
         </mat-option>
@@ -82,7 +82,7 @@
     
     <br/>
     <div class="button-row">
-      <button mat-flat-button color="primary" [disabled]="Party1.invalid || Party2.invalid || TradeDate.invalid || StartDate.invalid || MaturityDate.invalid||Nominal.invalid||Rate.invalid||Currency.invalid||DayCount.invalid" (click)="setValue(TradeID.value,Party1.value+','+Party2.value+','+TradeDate.value+','+StartDate.value+','+MaturityDate.value+','+Currency+','+Nominal.value+','+Rate.value+','+DayCount)">Save</button>
+      <button mat-flat-button color="primary" [disabled]="Party1.invalid || Party2.invalid || TradeDate.invalid || StartDate.invalid || MaturityDate.invalid||Nominal.invalid||Rate.invalid||Currency.invalid||DayCount.invalid" (click)="setValue(TradeID.value,Party1.value+','+Party2.value+','+TradeDate.value+','+StartDate.value+','+MaturityDate.value+','+Currency.value+','+Nominal.value+','+Rate.value+','+DayCount.value)">Save</button>
     </div>
   </form>
 </div>
