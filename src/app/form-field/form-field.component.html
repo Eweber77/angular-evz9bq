@@ -89,7 +89,7 @@
     
     <br/>
     <div class="button-row">
-      <button mat-flat-button color="primary"  (click)="setJSON(TradeID.value,Party1.value,Team.value,Party2.value,TradeDate.value,StartDate.value,MaturityDate.value,Currency,Nominal.value,Rate.value,DayCount)">Save</button>
+      <button mat-flat-button color="primary" [disabled]="Party1.invalid || Party2.invalid || TradeDate.invalid || StartDate.invalid || MaturityDate.invalid||Nominal.invalid||Rate.invalid||Currency.invalid||DayCount.invalid" (click)="setJSON(TradeID.value,Party1.value,Team.value,Party2.value,TradeDate.value,StartDate.value,MaturityDate.value,Currency,Nominal.value,Rate.value,DayCount)">Save</button>
     </div>
   </form>
 </div>

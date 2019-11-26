@@ -2,20 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { formatDate } from "@angular/common";
 
-export const MY_FORMAT: MatDateFormats = {
-parse: {
-dateInput: 'DD/MM/YYYY',
-},
-display: {
-dateInput: 'DD/MM/YYYY',
-monthYearLabel: 'MMM YYYY',
-dateA11yLabel: 'DD/MM/YYYY',
-monthYearA11yLabel: 'MMMM YYYY',
-},
-};
-
-export var TradeID: number;
-
 
 @Component({
   selector: 'app-form-field',
@@ -53,6 +39,8 @@ export class FormFieldComponent implements OnInit {
   onClickMe() {
     this.clickMessage = "Sending String";
   }
+
+  // JSON Message creation
   setJSON(id:string,Party1: string,Team:string,Party2: string,TradeDate: Date,StartDate: Date,MaturityDate: Date,Currency: string,Nominal: number,Rate: number,DayCount: string) {
   
   // Putting 0 as the default value if blank
